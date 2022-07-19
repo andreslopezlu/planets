@@ -280,15 +280,14 @@ window.addEventListener('hashchange', function() {
 	const newHash = new URL(document.URL).hash
   const currentPlanet = newHash.split('#')[1]
 
-  changePlanetInfo(currentPlanet)
-
-	console.log(newHash);
-  console.log(currentPlanet)
+  updateDOMPlanetInfo(currentPlanet)
 });
 
-const changePlanetInfo = (planet) => {
+const updateDOMPlanetInfo = (planet) => {
   const planetInfo = planetsData[planet]
 
-  console.log(planetInfo)
+  const title = document.getElementById('planet-name')
+
+  title.innerText = planetInfo.title
 }
 

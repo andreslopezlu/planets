@@ -48,5 +48,7 @@ window.addEventListener('hashchange', function() {
 const updateDOMPlanetInfo = (planet) => {
   const planetInfo = planetsData[planet]
 
-  
+  const title = document.getElementById('planet-name')
+
+  title.innerText = planetInfo.title
 }
