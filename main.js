@@ -9,31 +9,31 @@ import './data_source/venus';
 const planetsData ={
   earth: {
     title: `Earth`,
-    data: planetEarth
+    data: {...planetEarth}
   },
   jupiter: {
     title: `Jupiter`,
-    data: planetJupiter
+    data: {...planetJupiter}
   },
   mars: {
     title: `Mars`,
-    data: planetMars
+    data: {...planetMars}
   },
   neptune: {
     title: `Neptune`,
-    data: planetNeptune
+    data: {...planetNeptune}
   },
   saturn: {
     title: `Saturn`,
-    data: planetSaturn
+    data: {...planetSaturn}
   },
   uranus: {
     title: `Uranus`,
-    data: planetUranus
+    data: {...planetUranus}
   },
   venus: {
     title: `Venus`,
-    data: planetVenus
+    data: {...planetVenus}
   },
 }
 
