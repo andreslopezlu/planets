@@ -7,7 +7,7 @@ const planetNeptune = {
       label: `Wikipedia`,
       url: `https://en.wikipedia.org/wiki/Neptune`,
     },
-    image: `${basePathNeptune}/general.svg`,
+    images: [`${basePathNeptune}/general.svg`],
   },
   internalStructure: {
     data: `Neptune's internal structure resembles that of Uranus. Its atmosphere forms about 5% to 10% of its mass and extends perhaps 10% to 20% of the way towards the core. Increasing concentrations of methane, ammonia and water are found in the lower regions.`,
@@ -15,7 +15,7 @@ const planetNeptune = {
       label: `Wikipedia`,
       url: `https://en.wikipedia.org/wiki/Neptune#Internal_structure`,
     },
-    image: `${basePathNeptune}/internal.svg`,
+    images: [`${basePathNeptune}/internal.svg`],
   },
   surfaceGeology: {
     data: `Neptune's atmosphere is 80% hydrogen and 19% helium. A trace amount of methane is also present. Prominent absorption bands of methane exist at wavelengths above 600 nm, in the red and infrared portion of the spectrum.`,

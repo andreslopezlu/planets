@@ -7,7 +7,7 @@ const planetSaturn = {
       label: `Wikipedia`,
       url: `https://en.wikipedia.org/wiki/Saturn`,
     },
-    image: `${basePathSaturn}/general.svg`,
+    images: [`${basePathSaturn}/general.svg`],
   },
   internalStructure: {
     data: `Despite consisting mostly of hydrogen and helium, most of Saturn's mass is not in the gas phase, because hydrogen becomes a non-ideal liquid when the density is above 0.01 g/cm3, which is reached at a radius containing 99.9% of Saturn's mass.`,
@@ -15,7 +15,7 @@ const planetSaturn = {
       label: `Wikipedia`,
       url: `https://en.wikipedia.org/wiki/Saturn#Internal_structure`,
     },
-    image: `${basePathSaturn}/internal.svg`,
+    images: [`${basePathSaturn}/internal.svg`],
   },
   surfaceGeology: {
     data: `The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume. The planet's most famous feature is its prominent ring system, which is composed mostly of ice particles with a smaller amount of rocky debris and dust.`,

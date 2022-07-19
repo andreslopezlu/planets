@@ -7,7 +7,7 @@ const planetMars = {
       label: `Wikipedia`,
       url: `https://en.wikipedia.org/wiki/Mars`,
     },
-    image: `${basePathMars}/general.svg`,
+    images: [`${basePathMars}/general.svg`],
   },
   internalStructure: {
     data: `Like Earth, Mars has differentiated into a dense metallic core overlaid by less dense materials. Scientists initially determined that the core is at least partially liquid. Current models of its interior imply a core consisting primarily of iron and nickel with about 16–17% sulfur.`,
@@ -15,7 +15,7 @@ const planetMars = {
       label: `Wikipedia`,
       url: `https://en.wikipedia.org/wiki/Mars#Internal_structure`,
     },
-    image: `${basePathMars}/internal.svg`,
+    images: [`${basePathMars}/internal.svg`],
   },
   surfaceGeology: {
     data: `Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.`,
