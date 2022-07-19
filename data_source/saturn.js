@@ -1,6 +1,6 @@
 const basePathSaturn = '../assets/images/planets/saturn'  
   
-const nameOfSaturn = {
+const planetSaturn = {
   overviewContent: {
     data: `Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. It only has one-eighth the average density of Earth.`,
     source: {
