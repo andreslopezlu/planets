@@ -1,4 +1,4 @@
-const basePath = '../assets/images/planets/jupiter'  
+const basePathJupiter = '../assets/images/planets/jupiter'  
   
 const planetJupiter = {
   overviewContent: {
@@ -7,7 +7,7 @@ const planetJupiter = {
       label: `Wikipedia`,
       url: `https://en.wikipedia.org/wiki/Jupiter`,
     },
-    image: `${basePath}/general.svg`,
+    image: `${basePathJupiter}/general.svg`,
   },
   internalStructure: {
     data: `When the Juno arrived in 2016, it found that Jupiter has a very diffuse core that mixes into its mantle. A possible cause is an impact from a planet of about ten Earth masses a few million years after Jupiter's formation, which would have disrupted an originally solid Jovian core.`,
@@ -15,7 +15,7 @@ const planetJupiter = {
       label: `Wikipedia`,
       url: `https://en.wikipedia.org/wiki/Jupiter#Internal_structure`,
     },
-    image: `${basePath}/internal.svg`,
+    image: `${basePathJupiter}/internal.svg`,
   },
   surfaceGeology: {
     data: `The best known feature of Jupiter is the Great Red Spot, a persistent anticyclonic storm located 22° south of the equator. It is known to have existed since at least 1831, and possibly since 1665.`,
@@ -23,7 +23,7 @@ const planetJupiter = {
       label: `Wikipedia`,
       url: `https://en.wikipedia.org/wiki/Jupiter#Great_Red_Spot_and_other_vortices`,
     },
-    images: [`${basePath}/general.svg`, `${basePath}/geo.png`],
+    images: [`${basePathJupiter}/general.svg`, `${basePathJupiter}/geo.png`],
   },
   meaasures: {
     rotation: 9.93,
