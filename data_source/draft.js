@@ -2,26 +2,26 @@ const basePath = '../assets/images/planets/earth'
   
 const nameOfPlanet = {
   overviewContent: {
-    data: ,
+    data: ``,
     source: {
-      label: ,
-      url: ,
+      label: ``,
+      url: ``,
     },
     image: `${basePath}/general.svg`,
   },
   internalStructure: {
-    data: ,
+    data: ``,
     source: {
-      label: ,
-      url: ,
+      label: ``,
+      url: ``,
     },
     image: `${basePath}/internal.svg`,
   },
   surfaceGeology: {
-    data: ,
+    data: ``,
     source: {
-      label: ,
-      url: ,
+      label: ``,
+      url: ``,
     },
     images: [`${basePath}/general.svg`, `${basePath}/geo.png`],
   },
