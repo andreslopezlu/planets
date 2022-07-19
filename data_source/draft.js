@@ -1,12 +1,13 @@
 const basePath = '../assets/images/planets/earth'  
   
+const nameOfPlanet = {
   overviewContent: {
     data: ,
     source: {
       label: ,
       url: ,
     },
-    image: ,
+    image: `${basePath}/general.svg`,
   },
   internalStructure: {
     data: ,
@@ -14,7 +15,7 @@ const basePath = '../assets/images/planets/earth'
       label: ,
       url: ,
     },
-    image: ,
+    image: `${basePath}/internal.svg`,
   },
   surfaceGeology: {
     data: ,
@@ -22,11 +23,12 @@ const basePath = '../assets/images/planets/earth'
       label: ,
       url: ,
     },
-    images: [, ],
+    images: [`${basePath}/general.svg`, `${basePath}/geo.png`],
   },
   meaasures: {
     rotation: ,
     revolution: ,
     radius: ,
     temperature: ,
-  },
+  }
+}
