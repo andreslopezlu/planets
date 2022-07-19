@@ -1,0 +1,27 @@
+  overviewContent: {
+    data: ,
+    source: {
+      label: ,
+      url: ,
+    },
+  },
+  internalStructure: {
+    data: ,
+    source: {
+      label: ,
+      url: ,
+    },
+  },
+  surfaceGeology: {
+    data: ,
+    source: {
+      label: ,
+      url: ,
+    },
+  },
+  meaasures: {
+    rotation: ,
+    revolution: ,
+    radius: ,
+    temperature: ,
+  },
