@@ -1,9 +1,12 @@
+const basePath = '../assets/images/planets/earth'  
+  
   overviewContent: {
     data: ,
     source: {
       label: ,
       url: ,
     },
+    image: ,
   },
   internalStructure: {
     data: ,
@@ -11,6 +14,7 @@
       label: ,
       url: ,
     },
+    image: ,
   },
   surfaceGeology: {
     data: ,
@@ -18,6 +22,7 @@
       label: ,
       url: ,
     },
+    images: [, ],
   },
   meaasures: {
     rotation: ,
