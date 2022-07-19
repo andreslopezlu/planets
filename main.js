@@ -37,4 +37,16 @@ const planetsData ={
   },
 }
 
-console.log(planetsData)
+
+window.addEventListener('hashchange', function() {
+	const newHash = new URL(document.URL).hash
+  const currentPlanet = newHash.split('#')[1]
+
+  updateDOMPlanetInfo(currentPlanet)
+});
+
+const updateDOMPlanetInfo = (planet) => {
+  const planetInfo = planetsData[planet]
+
+  
+}
