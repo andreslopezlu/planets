@@ -52,3 +52,21 @@ const updateDOMPlanetInfo = (planet) => {
 
   title.innerText = planetInfo.title
 }
+
+
+// Thia for onload at Body
+
+const checkPlanet = () => {
+  const curentUrl = new URL(document.URL)
+  const currentHash = curentUrl.hash
+  const currentPlanet = currentHash.split('#')[1]
+
+  if(!currentPlanet) {
+    const URLToGo = new URL(document.URL)
+
+    URLToGo.hash = '#earth'
+    return document.location.href = URLToGo
+  }
+
+  updateDOMPlanetInfo(currentPlanet)
+}
