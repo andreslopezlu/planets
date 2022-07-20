@@ -72,7 +72,7 @@ const checkPlanet = () => {
   if(!currentPlanet) {
     const URLToGo = new URL(document.URL)
 
-    URLToGo.hash = '#earth-overviewContent'
+    URLToGo.hash = '#earth'
     return document.location.href = URLToGo
   }
 
