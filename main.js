@@ -6,6 +6,8 @@ import './data_source/saturn';
 import './data_source/uranus';
 import './data_source/venus';
 
+import './getDOMObjects';
+
 const planetsData ={
   earth: {
     title: `Earth`,
