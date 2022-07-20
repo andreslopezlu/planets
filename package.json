@@ -6,7 +6,7 @@
   "scripts": {
     "build-sass": "sass assets/sass/main.scss assets/css/main.css",
     "build-js": "import main.js > index.js",
-    "live": "npm run build-sass && live-server .",
+    "live": "npm run build-sass && npm run build-js && live-server .",
     "build": "npm run build-sass && npm run build-js"
   },
   "repository": {
