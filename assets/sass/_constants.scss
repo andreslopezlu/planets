@@ -1,0 +1,58 @@
+// import fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@400;600&display=swap');
+
+
+// colors
+
+$white: #FFFFFF;
+$dark-blue: #070724;
+$dark-gray: #38384F;
+$gray: #838391;
+$light-blue: #419EBB;
+$orange: #EDA249;
+$purple: #6D2ED5;
+$red-orange: #D14C32;
+$red: #D83A34;
+$yellow-orange: #CD5120;
+$light-green: #1EC1A2;
+$blue: #2D68F0;
+
+
+// fonts
+
+@mixin h1_title {
+    font-family: 'Antonio', sans-serif;
+    height: 80px;
+    line-height: 1.3;
+}
+
+@mixin h2_title {
+    font-family: 'Antonio', sans-serif;
+    height: 40px;
+    line-height: 1.3;
+    letter-spacing: -1.5;
+}
+
+@mixin h3_title {
+    font-family: 'League Spartan', sans-serif;
+    height: 12px;
+    line-height: 2.08;
+    letter-spacing: 2.6;
+    font-weight: 700;
+}   
+
+
+@mixin h4_title {
+    font-family: 'League Spartan', sans-serif;
+    height: 11px;
+    line-height: 2.27;
+    letter-spacing: 1;
+    font-weight: 700;
+}   
+
+@mixin body_font {
+    font-family: 'League Spartan', sans-serif;
+    height: 14px;
+    line-height: 1.79;
+}
