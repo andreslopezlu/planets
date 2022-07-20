@@ -23,6 +23,15 @@ const updateDOMPlanetInfo = (planet, section) => {
   updateTextContent(radius, `${planetInfo.data.meaasures.radius} KM`)
   updateTextContent(temperature, `${planetInfo.data.meaasures.temperature}°C`)
   activateSectionButton([btnOverviewContent, btnInternalStructure, btnSurfaceGeology], section)
+
+  console.log(planetInfo.data[section].images)
+  console.log(planetInfo.data[section].images[0])
+  console.log(planetInfo.data[section].images[1])
+  updateImages(
+    [mainImage, complementaryInage],
+    planetInfo.data[section].images,
+    [`draw of ${planet}`, `an image about geology of ${planet}`],
+  )
 }
 
 const updateTextContent = (element, content) => (element.innerText = content)
@@ -36,9 +45,9 @@ const activateSectionButton = (buttons, section) => {
   buttons.forEach(button => {
     const buttonClasses = button.classList
     
-    buttonClasses.remove('btn-section--active');
+    buttonClasses.remove('btn-section--active')
     if(button.id === `btn-${section}`) buttonClasses.add('btn-section--active')
-  });
+  })
 }
 
 const selectInfoGroup = (section) => {
@@ -49,6 +58,28 @@ const selectInfoGroup = (section) => {
 
   curentUrl.hash = `#${currentPlanet}-${section}`
   const newUrl = curentUrl.href
-  document.location.href = newUrl;
+  document.location.href = newUrl
+}
+
+const updateImages = (containers, sources, alts) => {
+  console.log(containers)
+  console.log(sources)
+  console.log(alts)
+
+  containers.forEach(container => {
+    const index = containers.indexOf(container)
+    const source = sources[index]
+    const alt = alts[index]
+    const containerClasses = container.classList
+
+    console.log(index)
+    console.log(container)
+    
+    containerClasses.remove('img--hidded')
+    container.src = source || ''
+    container.alt = alt || ''
+
+    if(!source) containerClasses.add('img--hidded')
+  })
 }
  
