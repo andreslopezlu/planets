@@ -49,16 +49,20 @@ const updateDOMPlanetInfo = (planet) => {
   const planetInfo = planetsData[planet]
 
   const title = document.getElementById('planet-name')
+  const tag = document.getElementById('tag-earth')
   const principalImg = document.getElementById('planet-principal-image')
   const secondarImg = document.getElementById('planet-second-image')
+
 
   title.innerText = planetInfo.title
   principalImg.src = planetInfo.data.surfaceGeology.images[0]
   secondarImg.src = planetInfo.data.surfaceGeology.images[1]
+  tag.addClass('active')
 }
 
 
 // Thia for onload at Body
+// overviewContent, internalStructure, surfaceGeology
 
 const checkPlanet = () => {
   const curentUrl = new URL(document.URL)
@@ -68,7 +72,7 @@ const checkPlanet = () => {
   if(!currentPlanet) {
     const URLToGo = new URL(document.URL)
 
-    URLToGo.hash = '#earth'
+    URLToGo.hash = '#earth-overviewContent'
     return document.location.href = URLToGo
   }
 
