@@ -11,10 +11,6 @@ window.addEventListener('hashchange', function() {
   const currentPlanet = currentPlanetOptions ? currentPlanetOptions[0] : undefined
   const currentSection = currentPlanetOptions ? currentPlanetOptions[1] : undefined
 
-  console.log(currentPlanetOptions)
-  console.log(currentPlanet)
-  console.log(currentSection)
-
   updateDOMPlanetInfo(currentPlanet, currentSection)
 });
 
@@ -28,8 +24,6 @@ const checkPlanet = () => {
   const currentPlanetOptions = newHash ? newHash.split('#')[1].split('-') : undefined
   const currentPlanet = currentPlanetOptions ? currentPlanetOptions[0] : undefined
   const currentSection = currentPlanetOptions ? currentPlanetOptions[1] : undefined
-
-  console.log(curentUrl)
 
   if(!newHash) {
     const URLToGo = new URL(document.URL)
