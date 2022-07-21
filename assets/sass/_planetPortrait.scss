@@ -1,0 +1,29 @@
+.main{
+  .planet-portrait {
+    height: 60vh;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+
+    &__image {
+      width: 70%;
+      height: 100%;
+      background-color: blue;
+    }
+
+    &__board {
+      width: 30%;
+      height: 100%;
+      background-color: pink;
+    }
+  }
+
+  .img--hidded {
+    display: none;
+  }
+
+  .btn-section--active {
+    background-color: cyan;
+  }
+}

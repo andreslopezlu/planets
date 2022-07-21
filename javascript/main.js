@@ -1,10 +1,12 @@
-import './data_source/earth';
-import './data_source/jupiter';
-import './data_source/mars';
-import './data_source/neptune';
-import './data_source/saturn';
-import './data_source/uranus';
-import './data_source/venus';
+// This section merge all planets data, simulating the parsed answer of an API
+
+import '../data_source/earth';
+import '../data_source/jupiter';
+import '../data_source/mars';
+import '../data_source/neptune';
+import '../data_source/saturn';
+import '../data_source/uranus';
+import '../data_source/venus';
 
 const planetsData ={
   earth: {
@@ -37,4 +39,9 @@ const planetsData ={
   },
 }
 
-console.log(planetsData)
+
+// This section enable DOM upgrade
+
+import './DOMObjects';
+import './DOMUpdater';
+import './DOMManager';

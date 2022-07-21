@@ -8,7 +8,60 @@
   <script src="./index.js"></script>
   <title>Planets</title>
 </head>
-<body onload="aModule()">
-  
+<body onload="checkPlanet()">
+  <div class="main">
+    <div class="navbar">
+      <div class="navbar__icon">
+
+      </div>
+      <div class="navbar__links">
+        <a href="#earth-overviewContent">Earth</a>
+        <a href="#mars-overviewContent">Mars</a>
+        <a href="#neptune-overviewContent">Neptune</a>
+        <a href="#saturn-overviewContent">Saturn</a>
+        <a href="#uranus-overviewContent">Uranus</a>
+        <a href="#venus-overviewContent">Venus</a>
+      </div>
+    </div>
+
+    <div class="planet-portrait">
+      <div class="planet-portrait__image">
+        <img id="planet-principal-image" src="">
+        <img id="planet-second-image" src="">
+      </div>
+      <div class="planet-portrait__board">
+        <h2 id="planet-name"></h2>
+        <p id="planet-info"></p>
+        <a href="" id="planet-info-source"></a>
+
+        <div class="planet-portrait__board__buttons">
+          <button id="btn-overviewContent" onclick="selectInfoGroup('overviewContent')">OVERVIEW</button>
+          <button id="btn-internalStructure" onclick="selectInfoGroup('internalStructure')">INTERNAL STRUCTURE</button>
+          <button id="btn-surfaceGeology" onclick="selectInfoGroup('surfaceGeology')">SURFACE GEOLOGY</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="planet-cards">
+      <div class="planet-cards__card">
+        <p class="planet-cards__card__label">ROTATION TIME</p>
+        <p class="planet-cards__card__data" id="rotation"></p>
+      </div>
+      <div class="planet-cards__card">
+        <p class="planet-cards__card__label">REVOLUTION TIME</p>
+        <p class="planet-cards__card__data" id="revolution"></p>
+      </div>
+      <div class="planet-cards__card">
+        <p class="planet-cards__card__label">RADIUS</p>
+        <p class="planet-cards__card__data" id="radius"></p>
+      </div>
+      <div class="planet-cards__card">
+        <p class="planet-cards__card__label">AVERAGE TEMP.</p>
+        <p class="planet-cards__card__data" id="temperature"></p>
+      </div>
+    </div>
+    
+    
+  </div>
 </body>
 </html>

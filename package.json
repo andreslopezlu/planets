@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-sass": "sass assets/sass/main.scss assets/css/main.css",
-    "build-js": "import main.js > index.js",
+    "build-js": "import javascript/main.js > index.js",
     "build": "npm run build-sass && npm run build-js",
     "watch:sass": "node-sass assets/sass/main.scss assets/css/main.css -w",
     "live": "live-server .",
