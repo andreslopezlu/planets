@@ -1,6 +1,6 @@
 .main{
   .planet-portrait {
-    height: 100vh;
+    height: 60vh;
     width: 100%;
     background-color: red;
     display: flex;
@@ -17,5 +17,13 @@
       height: 100%;
       background-color: pink;
     }
+  }
+
+  .img--hidded {
+    display: none;
+  }
+
+  .btn-section--active {
+    background-color: cyan;
   }
 }
