@@ -6,7 +6,9 @@ First you need Node
 - Clone the repo `git clone https://github.com/andreslopezlu/planets.git`
 - Move into repo's folder
 - Instal dependencies `npm install`
-- If you want you can instal live-server global `npm install live-server -g`
+- For develop or run locally I suggest you to use live-server global `npm install live-server -g`
 
-Each time you want to init the project with live-server `npm run live`
-Each time you want to transpile sass, tou need to run `npm run build-sass`
+To start css and html environment, run `npm run start-dev`
+Running the server, each time you modify js files, you need to compress them with `npm build-js``
+
+Enjoy!
