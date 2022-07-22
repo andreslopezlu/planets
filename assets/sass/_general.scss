@@ -1,7 +1,12 @@
 body {
   background-color: $dark-blue;
+  height: 100vh;
 }
 
 .main {
-  background-image: ('../images/background-stars.svg');
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('../images/background-stars.svg');
 }

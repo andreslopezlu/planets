@@ -3,7 +3,6 @@
   margin: 0 auto;
 
   .planet-portrait {
-    height: 60vh;
     width: 100%;
     background-color: red;
     display: flex;
@@ -11,13 +10,11 @@
 
     &__image {
       width: 70%;
-      height: 100%;
       background-color: blue;
     }
 
     &__board {
       width: 30%;
-      height: 100%;
       background-color: pink;
     }
   }
