@@ -1,0 +1,27 @@
+.main {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 32px;
+    border: 1px solid pink;
+
+    &__title {
+      @include h1_title();
+      color: $white;
+      margin: 22px 0;
+    }
+
+    &__links {
+
+      a {
+        @include body_font();
+        text-decoration: none;
+        color: $white;
+        margin-left: 33px;
+      }
+    }
+  }
+}

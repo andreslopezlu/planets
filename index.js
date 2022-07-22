@@ -1,3 +1,5 @@
+// This section merge all planets data, simulating the parsed answer of an API
+
 const basePathEarth = '../assets/images/planets/earth'
   
 const planetEarth = {  
@@ -276,43 +278,161 @@ const planetsData ={
 }
 
 
-window.addEventListener('hashchange', function() {
-	const newHash = new URL(document.URL).hash
-  const currentPlanet = newHash.split('#')[1]
+// This section enable DOM upgrade
 
-  updateDOMPlanetInfo(currentPlanet)
-});
+const getDOMObjects = () => {
 
-const updateDOMPlanetInfo = (planet) => {
-  const planetInfo = planetsData[planet]
+
+  // planet-portrait__board section
 
   const title = document.getElementById('planet-name')
-  const tag = document.getElementById('tag-earth')
-  const principalImg = document.getElementById('planet-principal-image')
-  const secondarImg = document.getElementById('planet-second-image')
+  const info = document.getElementById('planet-info')
+  const source = document.getElementById('planet-info-source')
+  const btnOverviewContent = document.getElementById('btn-overviewContent')
+  const btnInternalStructure = document.getElementById('btn-internalStructure')
+  const btnSurfaceGeology = document.getElementById('btn-surfaceGeology')
 
 
-  title.innerText = planetInfo.title
-  principalImg.src = planetInfo.data.surfaceGeology.images[0]
-  secondarImg.src = planetInfo.data.surfaceGeology.images[1]
-  tag.addClass('active')
+  // planet-portrait__image section
+
+  const mainImage = document.getElementById('planet-principal-image')
+  const complementaryInage = document.getElementById('planet-second-image')
+
+
+  // planet-cards section
+
+  const rotation = document.getElementById('rotation')
+  const revolution = document.getElementById('revolution')
+  const radius = document.getElementById('radius')
+  const temperature = document.getElementById('temperature')
+
+
+  return {
+    title,
+    info,
+    source,
+    btnOverviewContent,
+    btnInternalStructure,
+    btnSurfaceGeology,
+    mainImage,
+    complementaryInage,
+    rotation,
+    revolution,
+    radius,
+    temperature,
+  }
 }
+
+const updateDOMPlanetInfo = (planet, section) => {
+  const planetInfo = planetsData[planet]
+  const {
+    title,
+    info,
+    source,
+    btnOverviewContent,
+    btnInternalStructure,
+    btnSurfaceGeology,
+    mainImage,
+    complementaryInage,
+    rotation,
+    revolution,
+    radius,
+    temperature,
+  } = getDOMObjects()
+
+  updateTextContent(title, planetInfo.title)
+  updateTextContent(info, planetInfo.data[section].data)
+  updateLinkContent(source, planetInfo.data[section].source.url, planetInfo.data[section].source.label)
+  updateTextContent(rotation, `${planetInfo.data.meaasures.rotation} DAYS`)
+  updateTextContent(revolution, `${planetInfo.data.meaasures.revolution} DAYS`)
+  updateTextContent(radius, `${planetInfo.data.meaasures.radius} KM`)
+  updateTextContent(temperature, `${planetInfo.data.meaasures.temperature}°C`)
+  activateSectionButton([btnOverviewContent, btnInternalStructure, btnSurfaceGeology], section)
+
+  updateImages(
+    [mainImage, complementaryInage],
+    planetInfo.data[section].images,
+    [`draw of ${planet}`, `an image about geology of ${planet}`],
+  )
+}
+
+const updateTextContent = (element, content) => (element.innerText = content)
+
+const updateLinkContent = (link, url, content) => {
+  link.text = content
+  link.href = url
+}
+
+const activateSectionButton = (buttons, section) => {
+  buttons.forEach(button => {
+    const buttonClasses = button.classList
+    
+    buttonClasses.remove('btn-section--active')
+    if(button.id === `btn-${section}`) buttonClasses.add('btn-section--active')
+  })
+}
+
+const selectInfoGroup = (section) => {
+  const curentUrl = new URL(document.URL)
+  const newHash = curentUrl.hash
+  const currentPlanetOptions = newHash ? newHash.split('#')[1].split('-') : undefined
+  const currentPlanet = currentPlanetOptions ? currentPlanetOptions[0] : undefined
+
+  curentUrl.hash = `#${currentPlanet}-${section}`
+  const newUrl = curentUrl.href
+  document.location.href = newUrl
+}
+
+const updateImages = (containers, sources, alts) => {
+  containers.forEach(container => {
+    const index = containers.indexOf(container)
+    const source = sources[index]
+    const alt = alts[index]
+    const containerClasses = container.classList
+    
+    containerClasses.remove('img--hidded')
+    container.src = source || ''
+    container.alt = alt || ''
+
+    if(!source) containerClasses.add('img--hidded')
+  })
+}
+
+const knownHash = {
+  planets: ['earth', 'jupiter', 'mars', 'neptune', 'saturn', 'uranus', 'venus'],
+  sections: ['overviewContent', 'internalStructure', 'surfaceGeology'],
+}
+
+// Listen to hash changes, and start DOM modifications
+
+window.addEventListener('hashchange', function() {
+	const newHash = new URL(document.URL).hash
+  const currentPlanetOptions = newHash ? newHash.split('#')[1].split('-') : undefined
+  const currentPlanet = currentPlanetOptions ? currentPlanetOptions[0] : undefined
+  const currentSection = currentPlanetOptions ? currentPlanetOptions[1] : undefined
+
+  updateDOMPlanetInfo(currentPlanet, currentSection)
+});
 
 
 // Thia for onload at Body
+// It update hash to a default value, if initial is no hash at URL
 
 const checkPlanet = () => {
   const curentUrl = new URL(document.URL)
-  const currentHash = curentUrl.hash
-  const currentPlanet = currentHash.split('#')[1]
+  const newHash = curentUrl.hash
+  const currentPlanetOptions = newHash ? newHash.split('#')[1].split('-') : undefined
+  const currentPlanet = currentPlanetOptions ? currentPlanetOptions[0] : undefined
+  const currentSection = currentPlanetOptions ? currentPlanetOptions[1] : undefined
 
-  if(!currentPlanet) {
+  if(!newHash) {
     const URLToGo = new URL(document.URL)
 
-    URLToGo.hash = '#earth'
+    URLToGo.hash = '#earth-overviewContent'
     return document.location.href = URLToGo
   }
-
-  updateDOMPlanetInfo(currentPlanet)
+  
+  updateDOMPlanetInfo(currentPlanet, currentSection)
 }
+
 
