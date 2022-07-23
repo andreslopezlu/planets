@@ -6,19 +6,44 @@
     max-height: 540px;
     display: flex;
     flex-direction: row;
-    padding-top: 125px;
+    padding-top: 60px;
     box-sizing: border-box;
 
     &__image {
-      width: 70%;
-      // position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      img {
-        // position: absolute;
-        object-fit: fill;
-        height: 50%;
+      &__container {
+        height: 100%;
+        padding: 25px 0;
+        box-sizing: border-box;
+        position: relative;
 
+        img {
+          display: block;
+          object-fit: fill;
+          height: auto;
+        }
+
+        .img--hidded {
+          display: none;
+        }
+
+        #planet-principal-image {
+          height: 80%;
+        }
+
+        #planet-second-image {
+          position: absolute;
+          transform: rotate(-45deg);
+          height: 50%;
+          top: 40%;
+          left: 60%;
+        }
       }
+
     }
 
     &__board {
@@ -78,7 +103,7 @@
 
         .btn-section--active {
           background-color: $light-blue;
-
+          
           span {
             color: $dark-gray;
           }
@@ -86,9 +111,4 @@
       }
     }
   }
-
-  .img--hidded {
-    display: none;
-  }
-
 }
