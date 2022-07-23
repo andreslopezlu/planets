@@ -27,16 +27,43 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background-color: pink;
 
       &__info {
         height: auto;
+        color: $white;
+
+        h1 {
+          @include h1_title();
+          margin-bottom: 22px;
+        }
+        
+        p {
+          @include body_font();
+          margin-bottom: 24px;
+        }
+
+        span {
+          @include body_font();
+          margin-bottom: 24px;
+          color: $gray;
+          
+          a {
+            @include body_font();
+            text-decoration: none;
+            color: $gray;
+          }
+        }
       }
 
       &__buttons {
         width: 100%;
         display: flex;
         flex-direction: column;
+        column-gap: 25px;
+
+        button {
+          padding: 12px 0;
+        }
       }
     }
   }
