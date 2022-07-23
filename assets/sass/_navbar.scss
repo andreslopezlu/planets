@@ -5,17 +5,16 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 32px;
-    border: 1px solid pink;
+    box-sizing: border-box;
+    border-bottom: 1px solid $dark-gray;
+    height: 82px;
 
     &__title {
       @include h1_title();
       color: $white;
-      margin: 22px 0;
     }
 
     &__links {
-
       a {
         @include body_font();
         text-decoration: none;

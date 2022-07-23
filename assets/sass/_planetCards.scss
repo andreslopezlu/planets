@@ -1,12 +1,28 @@
 .main {
 
   .planet-cards {
-    height: 184px;
-    width: 100%;
     display: flex;
+    justify-content: space-between;
+    height: 158px;
 
-    * {
-      color: white;
+    &__card {
+      flex-grow: 1;
+      box-sizing: border-box;
+      max-width: 255px;
+      height: 158px;
+      border: 1px solid $dark-gray;
+      
+      &__label {
+        color: white;
+        margin: 20px 0 5px 23px;
+        @include h4_title();
+      }
+      
+      &__data {
+        color: white;
+        margin-left: 23px;
+        @include h1_title();
+      }
     }
   }
 }
