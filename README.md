@@ -12,3 +12,4 @@ To start css and html environment, run `npm run start-dev`
 Running the server, each time you modify js files, you need to compress them with `npm build-js``
 
 Enjoy!
+
