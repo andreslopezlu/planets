@@ -1,0 +1,26 @@
+.main {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid $dark-gray;
+    height: 82px;
+
+    &__title {
+      @include h1_title();
+      color: $white;
+    }
+
+    &__links {
+      a {
+        @include body_font();
+        text-decoration: none;
+        color: $white;
+        margin-left: 33px;
+      }
+    }
+  }
+}

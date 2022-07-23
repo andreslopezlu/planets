@@ -11,9 +11,7 @@
 <body onload="checkPlanet()">
   <div class="main">
     <div class="navbar">
-      <div class="navbar__icon">
-
-      </div>
+      <h1 class="navbar__title">THE PLANETS</h1>
       <div class="navbar__links">
         <a href="#earth-overviewContent">Earth</a>
         <a href="#mars-overviewContent">Mars</a>
@@ -26,18 +24,22 @@
 
     <div class="planet-portrait">
       <div class="planet-portrait__image">
-        <img id="planet-principal-image" src="">
-        <img id="planet-second-image" src="">
+        <div class="planet-portrait__image__container">
+          <img id="planet-principal-image" src="">
+          <img id="planet-second-image" src="">
+        </div>
       </div>
       <div class="planet-portrait__board">
-        <h2 id="planet-name"></h2>
-        <p id="planet-info"></p>
-        <a href="" id="planet-info-source"></a>
+        <div class="planet-portrait__board__info">
+          <h1 id="planet-name"></h1>
+          <p id="planet-info"></p>
+          <span>Source: <a href="" id="planet-info-source"></a></span>
+        </div>
 
         <div class="planet-portrait__board__buttons">
-          <button id="btn-overviewContent" onclick="selectInfoGroup('overviewContent')">OVERVIEW</button>
-          <button id="btn-internalStructure" onclick="selectInfoGroup('internalStructure')">INTERNAL STRUCTURE</button>
-          <button id="btn-surfaceGeology" onclick="selectInfoGroup('surfaceGeology')">SURFACE GEOLOGY</button>
+          <button id="btn-overviewContent" onclick="selectInfoGroup('overviewContent')"><span>01</span>OVERVIEW</button>
+          <button id="btn-internalStructure" onclick="selectInfoGroup('internalStructure')"><span>02</span>INTERNAL STRUCTURE</button>
+          <button id="btn-surfaceGeology" onclick="selectInfoGroup('surfaceGeology')"><span>03</span>SURFACE GEOLOGY</button>
         </div>
       </div>
     </div>
@@ -60,8 +62,6 @@
         <p class="planet-cards__card__data" id="temperature"></p>
       </div>
     </div>
-    
-    
   </div>
 </body>
 </html>
