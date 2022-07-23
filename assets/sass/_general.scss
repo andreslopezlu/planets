@@ -4,7 +4,11 @@ body {
 }
 
 .main {
+  box-sizing: border-box;
+  max-width: 1440px;
   height: 100%;
+  margin: 0 auto;
+  padding: 0 32px 56px 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
