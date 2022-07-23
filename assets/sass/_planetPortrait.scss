@@ -59,10 +59,29 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        column-gap: 25px;
 
         button {
+          cursor: pointer;
+          box-sizing: border-box;
+          background-color: transparent;
+          border: 1px solid $dark-gray;
           padding: 12px 0;
+          margin-bottom: 16px;
+          text-align: left;
+          color: $white;
+
+          span {
+            margin: 0 25px;
+            color: $gray;
+          }
+        }
+
+        .btn-section--active {
+          background-color: $light-blue;
+
+          span {
+            color: $dark-gray;
+          }
         }
       }
     }
@@ -72,7 +91,4 @@
     display: none;
   }
 
-  .btn-section--active {
-    background-color: cyan;
-  }
 }
