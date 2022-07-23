@@ -3,13 +3,20 @@
   .planet-portrait {
     width: 100%;
     height: 100%;
-    background-color: red;
+    max-height: 550px;
     display: flex;
     flex-direction: row;
 
     &__image {
       width: 70%;
-      background-color: blue;
+      // position: relative;
+
+      img {
+        // position: absolute;
+        object-fit: fill;
+        height: 50%;
+
+      }
     }
 
     &__board {
