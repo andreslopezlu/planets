@@ -10,13 +10,13 @@
     height: 82px;
 
     &__title {
-      @include h1_title();
+      @include h2_2_title();
       color: $white;
     }
 
     &__links {
       a {
-        @include body_font();
+        @include h3_title();
         text-decoration: none;
         color: $white;
         margin-left: 33px;
