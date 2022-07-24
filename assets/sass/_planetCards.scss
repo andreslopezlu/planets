@@ -15,13 +15,13 @@
       &__label {
         color: white;
         margin: 20px 0 5px 23px;
-        @include h4_title();
+        @include h3_title();
       }
       
       &__data {
         color: white;
         margin-left: 23px;
-        @include h1_title();
+        @include h2_title();
       }
     }
   }

@@ -93,6 +93,7 @@
           padding: 12px 0;
           margin-bottom: 16px;
           text-align: left;
+          @include h3_title();
           color: $white;
 
           span {
