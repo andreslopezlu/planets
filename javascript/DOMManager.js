@@ -1,5 +1,5 @@
 const knownHash = {
-  planets: ['earth', 'jupiter', 'mars', 'neptune', 'saturn', 'uranus', 'venus'],
+  planets: ['mercury', 'earth', 'jupiter', 'mars', 'neptune', 'saturn', 'uranus', 'venus'],
   sections: ['overviewContent', 'internalStructure', 'surfaceGeology'],
 }
 
