@@ -3,25 +3,49 @@
   .planet-cards {
     display: flex;
     justify-content: space-between;
-    height: 158px;
+    padding-top: 27px;
 
+    @media (min-width: $ms) {
+      padding: 0;
+    }
+
+    
     &__card {
       flex-grow: 1;
       box-sizing: border-box;
-      max-width: 255px;
-      height: 158px;
+      height: 88px;
+      max-width: 164px;
       border: 1px solid $dark-gray;
-      
-      &__label {
-        color: white;
-        margin: 20px 0 5px 23px;
-        @include h3_title();
+
+      @media (min-width: $ms) {
+        max-width: 255px;
+        height: 158px;
       }
       
+
+      &__label {
+        color: $gray;
+        margin: 16px 0 5px 15px;
+        @include h3_title();
+        font-size: 8px;
+        
+        @media (min-width: $ms) {
+          margin: 20px 0 5px 23px;
+          font-size: 12px;
+        }
+      }
+      
+
       &__data {
         color: white;
-        margin-left: 23px;
+        margin-left: 15px;
         @include h2_title();
+        font-size: 24px;
+        
+        @media (min-width: $ms) {
+          font-size: 40px;
+          margin-left: 23px;
+        }
       }
     }
   }
