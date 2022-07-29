@@ -168,10 +168,19 @@
         }
 
         .btn-section--active {
-          background-color: $light-blue;
+          background-color: $red;
 
+          @media (min-width: $ms) {
+            background-color: $light-blue;
+          }
+
+          
           &:hover {
-            background-color: $gray;
+            background-color: $red;
+
+            @media (min-width: $ms) {
+              background-color: $gray;
+            }
           }
           
           span {
