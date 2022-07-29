@@ -9,17 +9,42 @@
     border-bottom: 1px solid $dark-gray;
     height: 82px;
 
+    @media (max-width: $ms) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: auto;
+    }
+
     &__title {
       @include h2_2_title();
       color: $white;
+
+      @media (max-width: $ms) {
+        padding-top: 32px;
+        padding-bottom: 39px;
+      }
     }
 
     &__links {
+
+      @media (max-width: $ms) {
+        box-sizing: border-box;
+        padding-bottom: 27px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
       a {
         @include h3_title();
         text-decoration: none;
         color: $white;
         margin-left: 33px;
+
+        @media (max-width: $ms) {
+          margin: 0;
+        }
       }
     }
   }
