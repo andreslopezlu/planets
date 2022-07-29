@@ -96,6 +96,10 @@
           @include h3_title();
           color: $white;
 
+          &:hover {
+            background-color: $dark-gray;
+          }
+
           span {
             margin: 0 25px;
             color: $gray;
@@ -104,6 +108,10 @@
 
         .btn-section--active {
           background-color: $light-blue;
+
+          &:hover {
+            background-color: $gray;
+          }
           
           span {
             color: $dark-gray;
