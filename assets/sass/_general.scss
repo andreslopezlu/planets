@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   background-image: url('../images/background-stars.svg');
+  padding-bottom: 0 10px 32px 10px;
 
   @media (min-width: $ms) {
     max-width: 1440px;
