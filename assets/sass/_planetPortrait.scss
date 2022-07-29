@@ -6,7 +6,6 @@
     max-height: 540px;
     display: flex;
     flex-direction: row;
-    padding-top: 60px;
     box-sizing: border-box;
 
     &__image {
@@ -16,8 +15,6 @@
       align-items: center;
 
       &__container {
-        height: 100%;
-        padding: 25px 0;
         box-sizing: border-box;
         position: relative;
 
@@ -32,15 +29,15 @@
         }
 
         #planet-principal-image {
-          height: 80%;
+          width: 100%;
         }
 
         #planet-second-image {
           position: absolute;
-          transform: rotate(-45deg);
+          transform: rotate(-50deg);
           height: 50%;
           top: 40%;
-          left: 60%;
+          left: 50%;
         }
       }
 
