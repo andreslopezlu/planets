@@ -58,6 +58,7 @@
 
     &__board { 
       display: flex;
+      min-height: 210px;
       flex-direction: row;
       justify-content: space-between;
       box-sizing: border-box;
@@ -65,7 +66,7 @@
       @media (min-width: $ms) {
         flex-direction: column;
         width: 30%;
-        height: 100%;
+        min-height: none;
       }
 
       &__info {
@@ -79,22 +80,43 @@
         h1 {
           @include h1_title();
           margin-bottom: 22px;
+          font-size: 48px;
+          
+          @media (min-width: $ms) {
+            font-size: 80px;
+          }
         }
         
         p {
           @include body_font();
           margin-bottom: 24px;
+          font-size: 11px;
+          
+          @media (min-width: $ms) {
+            font-size: 14px;
+          }
         }
 
         span {
           @include body_font();
-          margin-bottom: 24px;
+          margin-bottom: 32px;
           color: $gray;
+          font-size: 11px;
+          
+          @media (min-width: $ms) {
+            font-size: 14px;
+            margin-bottom: 24px;
+          }
           
           a {
             @include body_font();
             text-decoration: none;
             color: $gray;
+            font-size: 11px;
+          
+            @media (min-width: $ms) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -124,6 +146,11 @@
           text-align: left;
           @include h3_title();
           color: $white;
+          font-size: 9px;
+          
+          @media (min-width: $ms) {
+            font-size: 12px;
+          }
 
           &:hover {
             background-color: $dark-gray;
@@ -132,6 +159,11 @@
           span {
             margin: 0 25px;
             color: $gray;
+            font-size: 9px;
+          
+            @media (min-width: $ms) {
+              font-size: 12px;
+            }
           }
         }
 
