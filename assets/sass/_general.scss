@@ -1,6 +1,10 @@
 body {
   background-color: $dark-blue;
   height: 100vh;
+
+  @media (max-width: $ms) {
+    height: 100%;
+  }
 }
 
 .main {
@@ -13,4 +17,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-image: url('../images/background-stars.svg');
+
+  @media (max-width: $ms) {
+    max-width: 720px;
+  }
 }
