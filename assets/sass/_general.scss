@@ -1,24 +1,25 @@
 body {
   background-color: $dark-blue;
-  height: 100vh;
 
-  @media (max-width: $ms) {
-    height: 100%;
+  @media (min-width: $ms) {
+    height: 100vh;
   }
 }
 
 .main {
-  box-sizing: border-box;
-  max-width: 1440px;
-  height: 100%;
+  
+  max-width: 720px;
   margin: 0 auto;
-  padding: 0 32px 56px 32px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-image: url('../images/background-stars.svg');
 
-  @media (max-width: $ms) {
-    max-width: 720px;
+  @media (min-width: $ms) {
+    max-width: 1440px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 32px 56px 32px;
+    justify-content: space-between;
   }
 }

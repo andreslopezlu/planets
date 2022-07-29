@@ -5,12 +5,20 @@
     justify-content: space-between;
     height: 158px;
 
+   
+
     &__card {
       flex-grow: 1;
       box-sizing: border-box;
-      max-width: 255px;
-      height: 158px;
+      height: 88px;
+      max-width: 164px;
       border: 1px solid $dark-gray;
+
+
+      @media (min-width: $ms) {
+        max-width: 255px;
+        height: 158px;
+      }
       
       &__label {
         color: white;
