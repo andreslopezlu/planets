@@ -1,25 +1,54 @@
 .main {
   .navbar {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
     border-bottom: 1px solid $dark-gray;
-    height: 82px;
+    
+
+    @media (min-width: $ms) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      height: 82px;
+    }
 
     &__title {
-      @include h1_title();
+      padding-top: 32px;
+      padding-bottom: 39px;
+      @include h2_2_title();
       color: $white;
+
+      @media (min-width: $ms) {
+        padding: 0;
+        width: 100%;
+        display: inline;
+      }
     }
 
     &__links {
+      box-sizing: border-box;
+      padding-bottom: 27px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      @media (min-width: $ms) {
+        padding: 0;
+        justify-content: flex-end;
+      }
+
       a {
-        @include body_font();
+        @include h3_title();
         text-decoration: none;
         color: $white;
-        margin-left: 33px;
+        margin: 0;
+
+        @media (min-width: $ms) {
+          margin-left: 33px;
+        }
       }
     }
   }

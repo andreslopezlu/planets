@@ -19,6 +19,12 @@ $light-green: #1EC1A2;
 $blue: #2D68F0;
 
 
+// breakpoints
+
+$ms: 1280px;
+$ss: 720px;
+
+
 // fonts
 
 @mixin h1_title {
@@ -30,6 +36,13 @@ $blue: #2D68F0;
 @mixin h2_title {
     font-family: 'Antonio', sans-serif;
     font-size: 40px;
+    line-height: 1.3;
+    letter-spacing: -1.5;
+}
+
+@mixin h2_2_title {
+    font-family: 'Antonio', sans-serif;
+    font-size: 28px;
     line-height: 1.3;
     letter-spacing: -1.5;
 }

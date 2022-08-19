@@ -7,6 +7,7 @@ import '../data_source/neptune';
 import '../data_source/saturn';
 import '../data_source/uranus';
 import '../data_source/venus';
+import '../data_source/mercury';
 
 const planetsData ={
   earth: {
@@ -36,6 +37,10 @@ const planetsData ={
   venus: {
     title: `Venus`,
     data: {...planetVenus}
+  },
+  mercury: {
+    title: `Mercury`,
+    data: {...planetMercury}
   },
 }
 
