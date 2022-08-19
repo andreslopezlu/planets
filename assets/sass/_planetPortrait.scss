@@ -55,8 +55,10 @@
       }
 
     }
-
-    &__board { 
+  
+    &__board{ 
+      width: 30%;
+      height: 100%;
       display: flex;
       min-height: 210px;
       flex-direction: row;
@@ -190,4 +192,6 @@
       }
     }
   }
+
 }
+
